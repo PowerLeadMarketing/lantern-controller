@@ -38,9 +38,9 @@ public class RemoteApi {
         final String password = props.getProperty("password");
         final String stored = props.getProperty("controller");
         final String controller = 
-            StringUtils.isNotBlank(stored) ? stored + ".appspot.com" : "lanternctrl.appspot.com";
+            StringUtils.isNotBlank(stored) ? stored + ".appspot.com" : "plm-alpha.appspot.com";
         final RemoteApiOptions options = new RemoteApiOptions()
-            .server(controller, 443)
+            .server("localhost", 8080)
             .credentials(username, password);
         final RemoteApiInstaller installer = new RemoteApiInstaller();
         try {
@@ -54,7 +54,7 @@ public class RemoteApi {
         try {
             final Dao dao = new Dao();
             /* Trigger your hacks here.*/
-            //dao.createInitialUser("insertmyaccount@getlantern.org");
+            dao.createInitialUser("daniel.douglas.stover@gmail.com");
         } finally {
             installer.uninstall();
         }

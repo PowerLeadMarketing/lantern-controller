@@ -20,7 +20,7 @@ public class ReportData {
         //String password = 
         //    new String(System.console().readPassword("password: "));
         RemoteApiOptions options = new RemoteApiOptions()
-            .server("lanternctrl.appspot.com", 443)
+            .server("plm-alpha.appspot.com", 443)
             .credentials("", "");
         RemoteApiInstaller installer = new RemoteApiInstaller();
         try {
